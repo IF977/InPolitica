@@ -3,7 +3,7 @@
 Projeto prático da disciplina de Engenharia de Software (IF977), ofertada no curso de Sistemas de Informação, Centro de Informática, UFPE.
 
 #### Justificativa
-Com as eleições de 2018 perto de chegar, identificamos a necessidade de conhecer melhor os atuais componentes do Congresso Nacional, em especial a Câmara de Deputados. Por causa disso, resolvemos criar o inPolitica como uma vitrine para o povo brasileiro buscando entregar trasparência, conscientização e a possibilidade de conhecerem mais sobre os que os representam perante o Estado.
+Com as eleições de 2018 perto de chegar, identificamos a necessidade de conhecer melhor os atuais componentes do Congresso Nacional, em especial a Câmara de Deputados. Por causa disso, resolvemos criar o InPolitica como uma vitrine para o povo brasileiro buscando entregar trasparência, conscientização e a possibilidade de conhecerem mais sobre os que os representam perante o Estado.
 
 
 #### Descrição do produto
