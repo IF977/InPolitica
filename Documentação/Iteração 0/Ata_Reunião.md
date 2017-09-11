@@ -1,5 +1,5 @@
 ### 💸 InPolitica
-### `Iteração 0`
+> Iteração 0
 
 #### Ata de Reunião
 
