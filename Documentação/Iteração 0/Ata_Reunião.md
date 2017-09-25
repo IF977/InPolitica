@@ -19,8 +19,8 @@
 - Próximos passos
 
 ####  Ações a serem tomadas
-- [ ] Atualização do README #1 (Todos)
-- [ ] Elaborar primeiras user stories (Todos)
+- [x] Atualização do README #1 (Todos)
+- [x] Elaborar primeiras user stories (Todos)
 - [ ] Criar identidade visual do projeto (Todos)
-- [ ] Criar mockup lo-fi, hi-fi e storyboards  ([@Davymota](http://github.com/Davymota))
+- [x] Criar mockup lo-fi, hi-fi e storyboards  ([@Davymota](http://github.com/Davymota))
 - [ ] Elaborar Termo de Abertura de Projeto ([@maygomes00](http://github.com/maygomes00))
