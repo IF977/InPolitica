@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  #get '/' => 'deputados#index'
+  
+  root 'deputados#index'
   resources :deputados
   resources :estados
   resources :partidos
