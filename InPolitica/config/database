@@ -29,14 +29,14 @@ development:
   adapter: postgresql
   encoding: unicode
   database: InPolitica_development
-  pool: 5
-  username: ubuntu
+  pool: 
+  username: rails
   password: password
   
 test:
   adapter: postgresql
   encoding: unicode
   database: InPolitica_test
-  pool: 5
-  username: ubuntu
+  pool: 
+  username: rails
   password: password
