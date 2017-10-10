@@ -1,0 +1,38 @@
+<%= form_for(@deputado) do |f| %>
+  <% if @deputado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deputado.errors.count, "error") %> prohibited this deputado from being saved:</h2>
+
+      <ul>
+      <% @deputado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :idade %><br>
+    <%= f.number_field :idade %>
+  </div>
+  <div class="field">
+    <%= f.label :url_foto %><br>
+    <%= f.text_field :url_foto %>
+  </div>
+  <div class="field">
+    <%= f.label :partido %><br>
+    <%= collection_select(:deputado, :partido_id, Partido.all,:id,:nome) %>
+  </div>
+   <div class="field">
+    <%= f.label :estado %><br>
+    <%= collection_select(:deputado, :estado_id, Estado.all,:id,:nome) %>
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
