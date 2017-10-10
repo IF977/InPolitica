@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171010001155) do
+ActiveRecord::Schema.define(version: 20171010012621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 20171010001155) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "gastos", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "informacao"
+    t.date     "data"
+    t.float    "valor"
+    t.integer  "deputado_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "gastos", ["deputado_id"], name: "index_gastos_on_deputado_id", using: :btree
+
   create_table "partidos", force: :cascade do |t|
     t.string   "nome"
     t.float    "total_gasto"
@@ -45,4 +57,5 @@ ActiveRecord::Schema.define(version: 20171010001155) do
 
   add_foreign_key "deputados", "estados"
   add_foreign_key "deputados", "partidos"
+  add_foreign_key "gastos", "deputados"
 end

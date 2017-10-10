@@ -1,3 +1,35 @@
+<div class="hero">
+  <nav class="menu">
+    <a href="#">Deputados federais</a>
+    <a href="#">Gastos por estado</a>
+    <a href="#">Quem somos</a>
+  </nav>
+  
+  <h2>
+    <span>in</span>Politica
+  </h2>
+  
+  <div class="search-bar">
+    <input type="text" placeholder="Encontre o deputado federal que deseja votar...">
+  </div>
+  
+</div>
+
+<section class="about">
+  <div class="col">
+    <div class="circle"></div>
+    <h4>O que queremos?</h4>
+    Buscamos trazer transparência para o cenário político atual, permitindo que a sociedade em geral possa ver os gastos orçamentários
+    dos atuais deputados federais.
+  </div>
+  <div class="col">
+    <div class="circle alt"></div>
+    <h4>Justificativa</h4>
+    Com as eleições de 2018 perto de chegar, identificamos a necessidade de conhecer melhor os atuais componentes do Congresso Nacional, em especial a Câmara de Deputados. Por causa disso, resolvemos criar o InPolitica como uma vitrine para o povo brasileiro buscando entregar trasparência, conscientização e a possibilidade de conhecerem mais sobre os que os representam perante o Estado.
+  </div>
+</section>
+
+<!--
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Deputados</h1>
@@ -8,6 +40,8 @@
       <th>Nome</th>
       <th>Idade</th>
       <th>Url foto</th>
+      <th>Partido</th>
+      <th>Estado</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +52,8 @@
         <td><%= deputado.nome %></td>
         <td><%= deputado.idade %></td>
         <td><%= deputado.url_foto %></td>
+        <td><%= deputado.partido.nome if deputado.partido %></td>
+        <td><%= deputado.partido.nome if deputado.partido %></td>
         <td><%= link_to 'Show', deputado %></td>
         <td><%= link_to 'Edit', edit_deputado_path(deputado) %></td>
         <td><%= link_to 'Destroy', deputado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,3 +65,4 @@
 <br>
 
 <%= link_to 'New Deputado', new_deputado_path %>
+-->
