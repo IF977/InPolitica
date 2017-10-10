@@ -162,6 +162,12 @@ div {
     h4 {
       font-size: 1.5em;
       margin: 15px 0;
+      text-transform: uppercase;
     }
   }
+}
+
+footer {
+  min-height: 100px;
+  background: #666;
 }

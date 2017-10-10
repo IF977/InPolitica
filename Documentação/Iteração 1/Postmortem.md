@@ -12,14 +12,17 @@ Início da iteração | Término da iteração
 - Implementação inicial dos testes [Davy]
 - Implementação de 2 user stories [Todos]
 - Postmortem da 1ª iteração [Todos]
+- Modelagem do banco de dados
 
 #### O que foi feito
 - Implementação dos testes iniciais [Davy e Renan]
 - Implementação de 2 users stories [Todos]
 - Template inicial da aplicação [Vanessa e Renan]
+- Modelagem do banco de dados [Renan]
 
 #### O que não foi feito
 - Todos os templates
+- Implementação com a API
 
 #### Planejado para a próxima iteração
 - Continuação do desenvolvimento
@@ -29,3 +32,4 @@ Início da iteração | Término da iteração
 #### Lições aprendidas
 - Prever o trabalho, criar issues e trabalhar com folga de prazo é importante
 - Ruby é uma linguagem extremamente prática, só precisa de bastante dedicação
+- APIs devem ser estudadas com bastante antecedência para garantir que não hajam erros
