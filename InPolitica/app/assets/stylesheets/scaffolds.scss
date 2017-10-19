@@ -5,6 +5,8 @@ body {
   font-size: 13px;
   line-height: 18px;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 p, ol, ul, td {
