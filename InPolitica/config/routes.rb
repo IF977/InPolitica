@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  resources :gastos
-  #get '/' => 'deputados#index'
-  
   root 'deputados#index'
+  resources :gastos
   resources :deputados
   resources :estados
   resources :partidos

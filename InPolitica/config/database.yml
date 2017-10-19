@@ -83,3 +83,5 @@ production:
   database: InPolitica_production
   username: InPolitica
   password: <%= ENV['InPolitica_password'] %>
+cucumber:
+  <<: *test
