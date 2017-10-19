@@ -7,7 +7,7 @@ Given("eu cliquei na seção do menu {string}") do |string|
 end
 
 Given("Eu vejo o campo de pesquisa") do
-  page.should have_css('.search-bar input')
+  expect(page).to have_css('.search-bar input')
 end
 
 Given("Digito o nome do deputado a ser pesquisado") do
