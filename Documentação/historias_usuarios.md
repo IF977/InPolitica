@@ -1,7 +1,7 @@
 ### 💸 InPolitica
 > Histórias dos Usuários
 
-#### Início (T1)
+### Início (T1)
 #### US1
 ```
 Como usuário visitante
@@ -20,7 +20,8 @@ Como usuário visitante
 Eu gostaria de ver informações acerca da Câmara de Deputados
 Para que eu possa compreender sua realidade atual
 ```
-#### Deputados Federais (T2)
+---
+### Deputados Federais (T2)
 #### US1
 ```
 Como usuário visitante
@@ -39,7 +40,8 @@ Como usuário visitante
 Eu gostaria de poder ser levado ao perfil de cada deputado ao clicar em sua foto
 Para que eu possa visualizar seu perfil
 ```
-#### Perfil Deputado Federal (T3)
+---
+### Perfil Deputado Federal (T3)
 #### US1
 ```
 Como usuário visitante
@@ -52,14 +54,16 @@ Como usuário visitante
 Eu gostaria de visualizar os gastos de um deputado em uma tabela
 Para que eu possa saber o quanto ele gasta
 ```
-#### Quem Somos (T4)
+---
+### Quem Somos (T4)
 #### US1
 ```
 Como usuário visitante
 Eu gostaria de ver uma seção 'Quem Somos'
 Para saber do que se trata o projeto e quem o desenvolveu
 ```
-#### Gastos por Estado (T5)
+---
+### Gastos por Estado (T5)
 #### US1
 ```
 Como usuário visitante
