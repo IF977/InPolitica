@@ -3,7 +3,6 @@ Given ('Eu estou na página inicial') do
 end
 
 Given("eu cliquei na seção do menu {string}") do |string|
-  visit(root_path)
   click_link(string)
 end
 
