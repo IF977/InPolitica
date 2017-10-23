@@ -1,0 +1,17 @@
+<div class="deputados-page general-page">
+    <div class="filter-bar">
+        <span>Filtros:</span>
+        <a href="#">Partidos</a>
+        <input type="text" name="search" placeholder="Buscar...">
+    </div>
+    
+    <ul class="deputados-list">
+        <% @deputados.each do |deputado| %>
+        <li>
+            <div class="picture" style="background-image: url('<%= deputado['urlFoto'] %>');"></div>
+            <%= deputado['nome'] %>
+            <span class="partido"><%= deputado['siglaPartido'] %></span>
+        </li>
+        <% end %>
+    </ul>
+</div>

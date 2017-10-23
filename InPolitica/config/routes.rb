@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root 'deputados#index'
+  get 'deputados/lista' => 'deputados#list', as: :deputados_list
+  get 'quem-somos' => 'deputados#about', as: :about
+  
   resources :gastos
   resources :deputados
   resources :estados

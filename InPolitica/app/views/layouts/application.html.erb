@@ -9,8 +9,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if @isIndex %>
   
-<%= yield %>
+<% else %>
+  <header>
+    <div class="logo">
+      <a href="/"><span>in</span>Politica</a>
+    </div>
+    <nav>
+      <%= link_to 'Deputados Federais', deputados_list_path %>
+      <a href="#">Gastos por Estado</a>
+      <%= link_to 'Quem Somos', about_path %>
+    </nav>
+  </header>
+  <section class="banner"></section>
+<% end %>
+  
+<div class="page">
+  <%= yield %>
+</div>
 
 <footer>
   IF977 (CIn/UFPE) &middot; 2017

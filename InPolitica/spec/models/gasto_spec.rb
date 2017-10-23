@@ -2,13 +2,15 @@ require 'rails_helper'
 
 RSpec.describe Gasto, type: :model do
   it "Gastos validos?" do
-            gasto = Gasto.new
-            gasto.titulo = "Contas atrasadas"
-            gasto.informacao = "Esses gastos são gastos atrasados"
-            gasto.valor = "55,89"
-            gasto.deputado = "Luigi"
+    gasto = Gasto.new
+    gasto.titulo = "Contas atrasadas"
+    gasto.informacao = "Esses gastos são gastos atrasados"
+    gasto.valor = "55,89"
+    gasto.deputado = "Luigi"
               
-            expect(gasto.valid?).to be_truthy
+    expect(gasto.valid?).to be_truthy
+
+  end
 end
 
 

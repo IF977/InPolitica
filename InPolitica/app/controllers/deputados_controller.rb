@@ -1,15 +1,27 @@
 class DeputadosController < ApplicationController
   before_action :set_deputado, only: [:show, :edit, :update, :destroy]
+  require 'httparty'
 
   # GET /deputados
   # GET /deputados.json
   def index
+    @isIndex = true
     @deputados = Deputado.all
   end
 
   # GET /deputados/1
   # GET /deputados/1.json
   def show
+  end
+  
+  # GET /deputados/lista
+  def list
+    api = CamaraApi.new(1)
+    @deputados = api.deputados['dados']
+  end
+  
+  # GET /quem-somos
+  def about
   end
 
   # GET /deputados/new

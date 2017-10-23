@@ -40,11 +40,13 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'cucumber'
   gem 'rspec-rails', '~> 3.0'
+  gem 'httparty'
 end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'httparty'
 end
 
 group :development do
