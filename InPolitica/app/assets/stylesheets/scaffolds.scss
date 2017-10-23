@@ -215,7 +215,8 @@ header {
 
 .banner {
   height: 120px;
-  background: #c0c0c0;
+  background: -webkit-linear-gradient(rgba(40, 40, 40, 0.8), rgba(0, 0, 0, 0.8)), url("http://www.gazetadopovo.com.br/ra/mega/Pub/GP/p3/2014/10/05/VidaPublica/Imagens/camara_dos_deputados091011.jpg");
+  background-position: center;
 }
 
 // Deputados List
@@ -256,8 +257,13 @@ header {
       text-align: center;
       font-weight: bold;
       cursor: pointer;
+      min-width: 176px;
       
-      .partido {
+      .name {
+        display: block;
+      }
+      
+      .party {
         display: block;
         font-size: 0.9em;
         color: #666;
