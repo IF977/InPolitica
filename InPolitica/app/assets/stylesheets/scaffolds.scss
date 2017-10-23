@@ -225,8 +225,35 @@ header {
   width: 80%;
   margin: 10px auto;
   
+  p {
+    font-size: 1.5em;
+    line-height: 1.7em;
+  }
+  
   a {
     color: #fff;
+  }
+  
+  h2 {
+    font-size: 3em;
+  }
+}
+
+blockquote {
+  border-left: 5px solid darken(#9a9a9a, 5%);
+  font-size: 2em;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  margin: 30px 0;
+  padding-left: 15px;
+  line-height: 35px;
+  color: darken(#9a9a9a, 5%);
+}
+
+ul.team {
+  li {
+    font-size: 1.5em;
+    margin: 18px 0;
   }
 }
 

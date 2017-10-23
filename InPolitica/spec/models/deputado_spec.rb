@@ -24,15 +24,20 @@ RSpec.describe Deputado, type: :model do
 
 end
 
-RSpec.describe Deputado.idade do
+RSpec.describe Deputado do
     context "Validade da idade de um deputado" do
         it { is_expected.to be > 21 } 
-            
+            deputado = Deputado.new
+            idade = deputado.idade
+            expect(idade.valid?).to be_truthy
         end
 
         # ocorre_uma_falha
         it { is_expected.to be < 18 }
-            
+            deputado = Deputado.new
+            idade = deputado.idade
+            expect(idade.valid?).to be_falsey
+        
         end
     
 end
