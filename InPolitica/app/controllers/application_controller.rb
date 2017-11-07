@@ -12,7 +12,10 @@ class ApplicationController < ActionController::Base
     end
   
     def deputados
-      self.class.get("/deputados/?pagina=1&itens=50", @options)
+      
+      self.class.get("/deputados/?pagina=1&itens=100", @options)
+     
+      #self.class.get("/deputados", @options)
     end
   
     def proposicoes

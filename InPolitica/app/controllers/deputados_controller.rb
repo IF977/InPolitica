@@ -16,8 +16,21 @@ class DeputadosController < ApplicationController
   
   # GET /deputados/lista
   def list
-    api = CamaraApi.new(1)
-    @deputados = api.deputados['dados']
+    
+    #api = CamaraApi.new(1)
+    #@deputados = api.deputados['dados']
+    api = []
+    i = 1
+    loop do
+      aux = HTTParty.get("https://dadosabertos.camara.leg.br/api/v2/deputados?pagina=#{i}&itens=100&ordenarPor=nome")['dados']
+      if aux == []
+        break
+      end
+      api += aux
+      i += 1
+    end
+  
+    @deputados = api
   end
   
   # GET /quem-somos
@@ -31,6 +44,10 @@ class DeputadosController < ApplicationController
 
   # GET /deputados/1/edit
   def edit
+  end
+  
+  def search
+    puts @params
   end
 
   # POST /deputados

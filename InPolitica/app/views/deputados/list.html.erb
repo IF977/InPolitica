@@ -9,7 +9,7 @@
         <% @deputados.each do |deputado| %>
         <li>
             <div class="picture" style="background-image: url('<%= deputado['urlFoto'] %>');"></div>
-            <span class="name"><%= deputado['nome'] %></span>
+            <span class="name"><%= deputado['nome'][0..19] %></span>
             <span class="party"><%= deputado['siglaPartido'] %></span>
         </li>
         <% end %>

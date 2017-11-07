@@ -1,8 +1,8 @@
-Feature: Ver o perfil de um deputado federal
+Feature: Acessar perfil de um deputado federal
   
   Como usuário visitante
-  Eu gostaria de visualizar o perfil de um deputado federal
-  Para que eu possa ver, com mais detalhes, informações sobre ele
+  Eu gostaria de poder ser levado ao perfil de cada deputado ao clicar em sua foto
+  Para que eu possa visualizar seu perfil
   
 Scenario: Acessar o perfil de um deputado
   Given eu fiz uma busca do deputado pelo seu nome
