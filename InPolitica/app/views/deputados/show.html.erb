@@ -1,29 +1,36 @@
+
+<div class="deputado-page">
+  <div class="column-left">
+    <div class="small-profile">
+      <img src="<%= @deputado.url_foto %>">
+      <em><%= @deputado.nome %></em>
+      <i><%= @deputado.partido.nome if @deputado.partido%></i>
+    </div>
+  </div>
+  <div class="column-right">
+    <h3>Gastos</h3>
+    <table class="expenses">
+      <thead>
+        <th>Data</th>
+        <th>Tipo de gasto</th>
+        <th>Valor líquido</th>
+      </thead>
+      <tbody>
+        <% @deputado.gastos.each do |gasto|%>
+        <tr>
+          <td><%= gasto.data %></td>
+          <td><%= gasto.informacao %></td>
+          <td><%= gasto.valorliquido %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @deputado.nome %>
-</p>
 
-<p>
-  <strong>Idade:</strong>
-  <%= @deputado.idade %>
-</p>
-
-<p>
-  <strong>Url foto:</strong>
-  <%= @deputado.url_foto %>
-</p>
-
-<p>
-  <strong>Partido</strong>
-  <%= @deputado.partido.nome if @deputado.partido%>
-</p>
-
-<p>
-  <strong>Estado:</strong>
-  <%= @deputado.estado.nome if @deputado.estado%>
-</p>
 
 <%= link_to 'Edit', edit_deputado_path(@deputado) %> |
 <%= link_to 'Back', deputados_path %>

@@ -1,8 +1,8 @@
 Feature: Visualização da tela quem somos
   
   Como usuário visitante
-  Eu gostaria de visualizar uma seção sobre a plataforma
-  Para que eu possa conhecer o serviço
+  Eu gostaria de ver uma seção 'Quem Somos'
+  Para saber do que se trata o projeto e quem o desenvolveu
 
 Scenario: Tela quem somos
   Given Eu estou na página inicial

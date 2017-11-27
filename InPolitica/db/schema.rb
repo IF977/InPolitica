@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171010012621) do
+ActiveRecord::Schema.define(version: 20171127132716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,12 @@ ActiveRecord::Schema.define(version: 20171010012621) do
     t.string   "nome"
     t.integer  "idade"
     t.string   "url_foto"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "partido_id"
     t.integer  "estado_id"
+    t.string   "iddeputado"
+    t.string   "idlegislatura"
   end
 
   add_index "deputados", ["estado_id"], name: "index_deputados_on_estado_id", using: :btree
@@ -39,11 +41,16 @@ ActiveRecord::Schema.define(version: 20171010012621) do
   create_table "gastos", force: :cascade do |t|
     t.string   "titulo"
     t.text     "informacao"
-    t.date     "data"
     t.float    "valor"
     t.integer  "deputado_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "iddocumento"
+    t.string   "cnpjcpffornecedor"
+    t.string   "nomefornecedor"
+    t.string   "urldocumento"
+    t.float    "valorliquido"
+    t.date     "data"
   end
 
   add_index "gastos", ["deputado_id"], name: "index_gastos_on_deputado_id", using: :btree
@@ -53,6 +60,8 @@ ActiveRecord::Schema.define(version: 20171010012621) do
     t.float    "total_gasto"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "sigla"
+    t.string   "idpartido"
   end
 
   add_foreign_key "deputados", "estados"

@@ -16,7 +16,6 @@ class DeputadosController < ApplicationController
   
   # GET /deputados/lista
   def list
-    
     #api = CamaraApi.new(1)
     #@deputados = api.deputados['dados']
     api = []
@@ -29,8 +28,59 @@ class DeputadosController < ApplicationController
       api += aux
       i += 1
     end
-  
+    
     @deputados = api
+    @deputados.each do |deputado|
+       deputadoBD = Deputado.where(iddeputado: deputado['id']).first_or_initialize
+       deputadoBD.nome = deputado['nome']
+       deputadoBD.url_foto = deputado['urlFoto']
+       deputadoBD.iddeputado = deputado['id']
+       deputadoBD.idlegislatura = deputado['idLegislatura']
+     # deputadoBD.partido_id = Partido.find(sigla: deputado['siglaPartido'])
+       deputadoBD.save
+      
+      
+      
+       aux1 = []
+       api2 = []
+       j = 1
+       loop do
+         aux1 = HTTParty.get("https://dadosabertos.camara.leg.br/api/v2/deputados/#{deputado['id']}/despesas?pagina=#{j}&itens=100")['dados']
+         if aux1 == []
+          break
+         end
+         api2 += aux1
+         j += 1
+       end
+       
+       
+       api2.each do |despesa|
+        if despesa['idDocumento'] != '' or despesa['valorLiquido'] != ''
+         auxGasto = deputadoBD.gastos.where(iddocumento: despesa['idDocumento'], valorliquido: despesa['valorLiquido'])
+         #print auxGasto.exists?
+         if auxGasto.exists?
+             # print "Id foi postada"
+              
+            if despesa['dataDocumento'] != nil
+              data = Date.parse(despesa['dataDocumento'])
+            else
+             data = ''
+            end
+            @gasto = auxGasto[0].update(iddocumento: despesa['idDocumento'],data: data, informacao: despesa['tipoDespesa'], valorliquido: despesa['valorLiquido'],valor: despesa['valorDocumento'], cnpjcpffornecedor: despesa["cnpjCpfFornecedor"], nomefornecedor: despesa["nomefornecedor"], urldocumento: despesa["urldocumento"])
+      
+         else
+          # print "Id nao foi postada"
+            
+            if despesa['dataDocumento'] != nil
+             data = Date.parse(despesa['dataDocumento'])
+            else
+             data = ''
+            end
+            @gasto = deputadoBD.gastos.create(iddocumento: despesa['idDocumento'],data: data, informacao: despesa['tipoDespesa'], valorliquido: despesa['valorLiquido'],valor: despesa['valorDocumento'], cnpjcpffornecedor: despesa["cnpjCpfFornecedor"], nomefornecedor: despesa["nomefornecedor"], urldocumento: despesa["urldocumento"])
+        end
+       end 
+      end
+    end
   end
   
   # GET /quem-somos

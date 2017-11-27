@@ -1,10 +1,28 @@
 class PartidosController < ApplicationController
   before_action :set_partido, only: [:show, :edit, :update, :destroy]
-
+  require 'httparty'
   # GET /partidos
   # GET /partidos.json
   def index
-    @partidos = Partido.all
+    api = []
+    i = 1
+    loop do
+      aux = HTTParty.get("https://dadosabertos.camara.leg.br/api/v2/partidos?pagina=#{i}&itens=100&ordenarPor=sigla")['dados']
+      if aux == []
+        break
+      end
+      api += aux
+      i += 1
+    end
+    @partidos = api
+    @partidos.each do |partido|
+       partidoBD = Partido.where(idpartido: partido['id']).first_or_initialize
+       partidoBD.nome = partido['nome']
+       partidoBD.sigla = partido['sigla']
+       partidoBD.save
+    end
+    
+     @partidos = Partido.all
   end
 
   # GET /partidos/1
