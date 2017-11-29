@@ -13,3 +13,5 @@ Trata-se de um SaaS (Software as a Service) que tem como objetivo principal prom
 * Mayara Gomes ([@maygomes00](https://github.com/maygomes00)) - Desenvolvedora de Testes
 * Renan Rodrigues ([@RenanRodriguesRecife](https://github.com/RenanRodriguesRecife)) - Desenvolvedor
 * Vanessa Barreiros ([@vanessa](https://github.com/vanessa)) - Gerente do Projeto/Desenvolvedora
+
+Screencast: https://youtu.be/DdDSeFj2bEw
